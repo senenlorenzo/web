@@ -1,0 +1,213 @@
+:root {
+    --ratio-w3c-css: 88/31;
+    --ratio-w3c-wcag: 88/31;
+    --ratio-w3c-html5: 182/64;
+    --url-icon-email: url("../svg/iconos/icon-email.svg");
+    --url-icon-headphone: url("../svg/iconos/icon-headphone.svg");
+    --url-icon-location: url("../svg/iconos/icon-location.svg");
+    --url-icon-smartphone: url("../svg/iconos/icon-smartphone.svg");
+}
+
+body > footer {
+    min-height: auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background: var(--bg-footer);
+
+    /* Textos en color blanco */
+    & h2,
+    & li a,
+    & li a span {
+        color: var(--color-a-footer);
+    }
+
+    & > h2 {
+        margin-bottom: 5%;
+        font-size: medium;
+    }
+
+    & > section.contentinfo,
+    & > section.footer__legal {
+        width: 100%;
+    }
+
+    & > section.footer__legal {
+        margin-top: 2em;
+    }
+}
+
+/* Cambia los colores de los linsk al hover */
+body > footer {
+    & section.footer__legal,
+    & section.contentinfo {
+        & a:not(.no-border) {
+            background-image: linear-gradient(var(--color-a-footer), var(--color-a-footer));
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            background-size: 0 1px;
+            transition: background-size 0.3s ease-out;
+
+            &:focus-visible {
+                color: var(--color-a-footer);
+                background-size: 100% 1px;
+            }
+
+            @media (hover: hover) {
+                &:hover {
+                    color: var(--color-a-footer);
+                    background-size: 100% 1px;
+                }
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+                transition: none;
+            }
+        }
+    }
+}
+
+body > footer {
+    & section.contentinfo {
+        & a.pattern figure {
+            width: 50vw;
+            margin: 0 auto;
+            margin-top: 5vh;
+            margin-bottom: 5vh;
+            aspect-ratio: var(--logo-ratio);
+            background-image: url("../svg/sn.svg");
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
+
+body > footer {
+    /* No mostrar el h2 del footer del sitio */
+    & section.footer__legal {
+        & h2 {
+            display: none;
+        }
+    }
+
+    & li.validator,
+    & li.legal {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: small;
+    }
+
+    & li.validator {
+        a figure {
+            transition: transform 0.2s ease;
+        }
+        &:hover {
+            & a figure {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    li.legal,
+    li.legal a {
+        height: 2em;
+        line-height: 2em;
+        font-size: small;
+    }
+
+    li.legal {
+        margin: 0.5em;
+    }
+}
+
+figure.w3c {
+    width: 2em;
+    margin: 0;
+
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-attachment: scroll;
+    background-origin: border-box;
+    -webkit-filter: none;
+    filter: none;
+
+    &.css {
+        background-image: url("../svg/w3c/css.svg");
+        aspect-ratio: var(--ratio-w3c-css);
+    }
+
+    &.wcag {
+        background-image: url("../svg/w3c/wcag.svg");
+        aspect-ratio: var(--ratio-w3c-wcag);
+    }
+
+    &.xhtml5 {
+        background-image: url("../svg/w3c/html5.svg");
+        aspect-ratio: var(--ratio-w3c-html5);
+    }
+}
+
+span[class^="icon-"],
+span[class*=" icon-"] {
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        margin-right: 0.25em;
+        vertical-align: text-top;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        filter: brightness(0) invert(1);
+    }
+}
+
+span.icon-email::before {
+    background-image: var(--url-icon-email);
+}
+span.icon-headphone::before {
+    background-image: var(--url-icon-headphone);
+}
+span.icon-location::before {
+    background-image: var(--url-icon-location);
+}
+span.icon-smartphone::before {
+    background-image: var(--url-icon-smartphone);
+}
+
+/* Media Queries */
+
+body > footer {
+    & h2,
+    & section.footer__legal,
+    & section.contentinfo {
+        text-align: center;
+    }
+}
+
+@media (min-width: 700px) {
+    body > footer {
+        & h2,
+        & section.footer__legal,
+        & section.contentinfo {
+            text-align: left;
+        }
+
+        & section.contentinfo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            & a.pattern figure {
+                width: 15vw;
+                margin: 0;
+            }
+        }
+
+        & section.contentinfo {
+        }
+    }
+}

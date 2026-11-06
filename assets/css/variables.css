@@ -24,6 +24,7 @@
     --color-a: #530502;
     --color-a--hover: #270a1e;
 
+    --portada-animacion: url(../img/59s6vt7zn6vg1.gif);
     --portada--origin: url(../img/banner-origin.webp);
     --portada--large: url("../img/banner-larger.webp");
     --portada--medium: url("../img/banner-medium.webp");
@@ -32,6 +33,8 @@
     --galeria-1--large: url("../img/freedom-900px.webp");
     --galeria-1--medium: url("../img/freedom-600px.webp");
     --galeria-1--thumb: url("../img/freedom-300px.webp");
+
+    --yoshi-image: url(../img/yoshi-1.webp);
 
     --galeria-2--large: url("../img/blue-sky-900px.webp");
     --galeria-2--medium: url("../img/blue-sky-600px.webp");
@@ -79,6 +82,9 @@
     --carrousel-5--large: url("https://pixfill.dev/1024x683/11c09d/ffffff");
     --carrousel-5--full: url("https://pixfill.dev/1920x1280/11c09d/ffffff");
     --ratio-carrousel: 3/2;
+
+    --bg-footer: black;
+    --color-a-footer: white;
 
     --url--logo: url(../svg/sn.svg);
     --logo-ratio: 73/43;

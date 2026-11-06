@@ -1,3 +1,17 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "MarioBros";
+    font-weight: 400;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    text-shadow: 5px 5px 3px #000;
+}
+
 /* Smooth color + shadow on hover */
 .sn-transicion-color {
     width: 25vw;

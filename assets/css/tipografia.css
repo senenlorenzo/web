@@ -5,6 +5,10 @@
     src: url(../fonts/MickeyMouse_PERSONAL_USE_ONLY.otf);
 }
 @font-face {
+    font-family: "mickey-2";
+    src: url(../fonts/MickeyMouseLine_PERSONAL_USE_ONLY.otf);
+}
+@font-face {
     font-family: "Star";
     src: url(../fonts/Starjedi.ttf);
 }

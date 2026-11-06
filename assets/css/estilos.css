@@ -1,22 +1,20 @@
-.agua {
-    &::after {
-        position: fixed;
-        content: "";
-        width: calc(var(--marca-agua-h) * var(--logo-ratio));
-        height: var(--marca-agua-h);
-        bottom: 1rem;
-        right: 1rem;
+body {
+    position: relative;
 
-        background-image: var(--url--logo);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        opacity: 0.5;
+    & > header {
+        z-index: 3;
+    }
+    & > nav {
+        z-index: 2;
+    }
+    & > footer {
+        position: relative;
+        z-index: 1;
     }
 }
 /* Underline from center */
 .sn-underline,
-a {
+a:not(.no-border) {
     display: inline-block;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
@@ -109,6 +107,43 @@ body > nav {
 body main {
     margin-top: 3.5rem;
 }
+header.portada.animacion {
+    height: 40vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & h2 {
+        position: relative;
+        width: 100%;
+        padding: 1em;
+        text-align: center;
+        background-color: #00000080;
+        color: white;
+    }
+}
+header.portada.animacion {
+    &::before {
+        background-image: var(--portada-animacion);
+        filter: drop-shadow(2px 2px 8px red) drop-shadow(4px 4px 0px blue) drop-shadow(8px 8px 5px black) brightness(1);
+        /* filter: hue-rotate(-50deg) saturate(130%) drop-shadow(2px 2px 8px red) drop-shadow(4px 4px 0px blue) drop-shadow(8px 8px 5px black) brightness(1); */
+    }
+}
+
+@media (min-width: 600px) {
+    header.portada.animacion {
+        &::before {
+            background-image: var(--portada-animacion);
+        }
+    }
+}
+@media (min-width: 900px) {
+    header.portada.animacion {
+        &::before {
+            background-image: var(--portada-animacion);
+        }
+    }
+}
 header.portada {
     height: 40vh;
 
@@ -124,7 +159,7 @@ header.portada {
         color: white;
     }
 }
-header.portada {
+header.portada:not(.animacion) {
     &::before {
         background-image: var(--portada--medium);
         filter: hue-rotate(-50deg) saturate(130%) drop-shadow(2px 2px 8px red) drop-shadow(4px 4px 0px blue) drop-shadow(8px 8px 5px black) brightness(1);
@@ -155,6 +190,7 @@ body {
     & nav.principal {
         padding-right: 4vw;
     }
+    & > footer,
     & main > section > article {
         padding: 5vh;
         padding-left: 4vw;
@@ -169,6 +205,7 @@ body {
         & nav.principal {
             padding-right: 7.5vw;
         }
+        & > footer,
         & main > section > article {
             padding-left: 7.5vw;
             padding-right: 7.5vw;
@@ -183,9 +220,26 @@ body {
         & nav.principal {
             padding-right: 10vw;
         }
+        & > footer,
         & main > section > article {
             padding-left: 10vw;
             padding-right: 10vw;
         }
+    }
+}
+.agua {
+    &::after {
+        position: fixed;
+        content: "";
+        width: calc(var(--marca-agua-h) * var(--logo-ratio));
+        height: var(--marca-agua-h);
+        bottom: 1rem;
+        right: 1rem;
+
+        background-image: var(--url--logo);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        opacity: 0.5;
     }
 }

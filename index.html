@@ -31,6 +31,7 @@
         <link rel="stylesheet" href="assets/css/tipografia.css" />
         <link rel="stylesheet" href="assets/css/menu.css" />
         <link rel="stylesheet" href="assets/css/images.css" />
+        <link rel="stylesheet" href="assets/css/footer.css" />
         <link rel="stylesheet" href="assets/css/estilos.css" />
         <!-- Título de la pestaña del navegador -->
         <title>UF1303 | Elaboración de hojas de estilos</title>
@@ -46,7 +47,7 @@
         <nav class="principal" aria-label="Navegación principal">
             <h2 class="pechado">Menú Principal</h2>
             <input id="icon-menu" name="icon-menu" type="checkbox" />
-            <label for="icon-menu" class="icon-menu" aria-label="Abrir/Cerrar menú">Menú</label>
+            <label for="icon-menu" class="icon-menu">Menú</label>
             <ul>
                 <li>
                     <a href="#">Inicio</a>
@@ -55,7 +56,7 @@
                     <a href="#">Temas</a>
                     <ul>
                         <li>
-                            <a href="textos.html">Textos</a>
+                            <a href="temas/referencias.html">Referencias</a>
                         </li>
                         <li>
                             <a href="temas/imagenes.html">Imágenes</a>
@@ -65,6 +66,9 @@
                         </li>
                         <li>
                             <a href="temas/formularios.html">Formularios</a>
+                        </li>
+                        <li>
+                            <a href="temas/pattern.html">Patrones</a>
                         </li>
                     </ul>
                 </li>
@@ -82,141 +86,88 @@
                     <h2>Web de ejercicios</h2>
                 </header>
                 <article>
-                    <h3>Referencias teóricas</h3>
-                    <p>Referencias:</p>
-                    <ul class="enlaces-pdf">
-                        <li><a href="assets/pdf/UF1303_Elaboracion-hojas-de-estilo.pdf" target="_blank" title="abrir documento pdf en pestaña nueva">UF1303-Elaboración de hojas de estilo</a></li>
-                        <li><a href="assets/pdf/CSS_Manual_rapido.pdf" target="_blank" title="abrir documento pdf en pestaña nueva">Manual rapido de CSS</a></li>
-                        <li><a href="assets/pdf/CSS_Guia_ref_rap.pdf" target="_blank" title="abrir documento pdf en pestaña nueva">Guia de referencia rápida</a></li>
-                        <li><a href="assets/pdf/CSS_posicionamiento_relativo_absoluto.pdf" target="_blank" title="abrir documento pdf en pestaña nueva">Posicionamiento relativo y absoluto en CSS</a></li>
-                        <li><a href="https://developer.mozilla.org/es/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts" target="_blank" title="abrir pagina en pestaña nueva">Flexbox de mozilla</a></li>
-                    </ul>
+                    <h3>Sobre la página</h3>
+                    <p>Página web con algunos ejercicios hechos en el curso sobre css como carrousel, animaciones, transformers, transiciones y galeria de imágenes.</p>
                 </article>
                 <article>
-                    <h3>Animación css3</h3>
-                    <figure class="yoshi"></figure>
-                </article>
-                <article>
-                    <h3>Transiciones CSS3</h3>
-                    <figure class="sn-transicion-color"></figure>
-                </article>
-                <article>
-                    <h3>Transformers</h3>
-                    <p>Prácticas de transformers</p>
-                    <ul class="demo">
-                        <li>
-                            <figure><span class="translate">X, Y,</span></figure>
-                        </li>
-                        <li>
-                            <figure><span class="rotate">45º</span></figure>
-                        </li>
-                        <li>
-                            <figure><span class="scale">scale</span></figure>
-                        </li>
-                    </ul>
-                </article>
-                <article class="galeria-flex">
-                    <h3>Galería de imágenes</h3>
-                    <p>Parrilla de imágenes con Flexbox</p>
+                    <h3>Animaciones css</h3>
+                    <a href="temas/animaciones.html" class="no-border"><figure class="img-yoshi"></figure></a>
 
-                    <ul class="galeria">
-                        <li>
-                            <figure class="img-before diapositiva-1">
-                                <figcaption>Foto 1</figcaption>
-                            </figure>
-                        </li>
-
-                        <li>
-                            <figure class="img-before diapositiva-2">
-                                <figcaption>Foto 2</figcaption>
-                            </figure>
-                        </li>
-
-                        <li>
-                            <figure class="img-before diapositiva-3">
-                                <figcaption>Foto 3</figcaption>
-                            </figure>
-                        </li>
-
-                        <li>
-                            <figure class="img-before diapositiva-4">
-                                <figcaption>Foto 4</figcaption>
-                            </figure>
-                        </li>
-
-                        <li>
-                            <figure class="img-before diapositiva-5">
-                                <figcaption>Foto 5</figcaption>
-                            </figure>
-                        </li>
-                        <li>
-                            <figure class="img-before diapositiva-1">
-                                <figcaption>Foto 1</figcaption>
-                            </figure>
-                        </li>
-
-                        <li>
-                            <figure class="img-before diapositiva-2">
-                                <figcaption>Foto 2</figcaption>
-                            </figure>
-                        </li>
-
-                        <li>
-                            <figure class="img-before diapositiva-3">
-                                <figcaption>Foto 3</figcaption>
-                            </figure>
-                        </li>
-
-                        <li>
-                            <figure class="img-before diapositiva-4">
-                                <figcaption>Foto 4</figcaption>
-                            </figure>
-                        </li>
-
-                        <li>
-                            <figure class="img-before diapositiva-5">
-                                <figcaption>Foto 5</figcaption>
-                            </figure>
-                        </li>
-                    </ul>
-                </article>
-                <article class="carrousel-container">
-                    <h3>Simple Carrousel Pure CSS3</h3>
-                    <p>Galería de imágenes en animación infinita automática tipo Carrousel</p>
-                    <ul class="carrousel">
-                        <li>
-                            <figure class="img-before">
-                                <figcaption>Color celeste <small>(#3b82f6)</small></figcaption>
-                            </figure>
-                        </li>
-
-                        <li>
-                            <figure class="img-before">
-                                <figcaption>Color Amarillento <small>(#bdc011)</small></figcaption>
-                            </figure>
-                        </li>
-
-                        <li>
-                            <figure class="img-before">
-                                <figcaption>Color rosado <small>(#d265b5)</small></figcaption>
-                            </figure>
-                        </li>
-
-                        <li>
-                            <figure class="img-before">
-                                <figcaption>Color Azulón <small>(#3711c0)</small></figcaption>
-                            </figure>
-                        </li>
-
-                        <li>
-                            <figure class="img-before">
-                                <figcaption>Color Verdoso <small>(#11c09d)</small></figcaption>
-                            </figure>
-                        </li>
-                    </ul>
+                    <p>"Las animaciones CSS permiten modificar gradualmente las propiedades de los elementos de una página web, creando efectos de movimiento, cambios de color, rotaciones y muchas otras posibilidades sin necesidad de JavaScript.</p>
                 </article>
             </section>
         </main>
-        <footer></footer>
+        <footer>
+            <h2>Creando webs para las personas</h2>
+            <section class="contentinfo justifys">
+                <h3 class="pechado">Información de contacto</h3>
+                <address class="justifys">
+                    <ul>
+                        <li>
+                            <a href="https://maps.app.goo.gl/WiBomM5mFAYKQ3CL9" title="A academia e oficinas en Google Maps" class="footer" target="_blank">
+                                <span class="icon-location">Rúa Angelo Colocci, 25, 27003 Lugo</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:ifcd0110@gmx.com" title="Enviar un correo dende este dispositivo" class="footer">
+                                <span class="icon-email">ifcd0110@gmx.com</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+3498222333" title="Chamar dende este dispositivo" class="footer">
+                                <span class="icon-headphone">982 222 333</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+34666777888" title="Chamar xa dende este dispositivo" class="footer">
+                                <span class="icon-smartphone">666 777 888</span>
+                            </a>
+                        </li>
+                    </ul>
+                </address>
+
+                <article>
+                    <h3 class="pechado">Mapa web</h3>
+
+                    <a href="#" target="_blank" title="Página Principal" class="no-border pattern abcenter">
+                        <figure aria-label="Logo"></figure>
+                    </a>
+                </article>
+            </section>
+
+            <section class="footer__legal cross-fins">
+                <h2 class="pechado">Menú á documentación legal e dereiros de usuarios</h2>
+
+                <ul>
+                    <li class="validator cross-centros">
+                        <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsenenlorenzo.github.io%2Fweb%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=es" target="_blank" title="Esta páxina web é un documento CSS versión 3 + SVG válido!" class="no-border">
+                            <figure class="w3c css" aria-label="Selo de Calidade Web: CSS 3 + SVG válido!"></figure>
+                        </a>
+                    </li>
+                    <li class="validator cross-centros">
+                        <a href="https://wave.webaim.org/report#/https://senenlorenzo.github.io/web/" target="_blank" title="Esta páxina web ten superado o nivel Triple-A de conformidad segundo as Pautas de Accesibilidade a Contenido Web 2.0 do Organismo W3C WAI WCAG 2.0" class="no-border">
+                            <figure aria-label="Selo de Calidade Web: Superado WCAG 2.0 (Nivel AAA)! " class="w3c wcag"></figure>
+                        </a>
+                    </li>
+                    <li class="validator cross-centros">
+                        <a href="https://validator.w3.org/nu/?level=warning&doc=https%3A%2F%2Fsenenlorenzo.github.io%2Fweb%2F" target="_blank" title="Este sitio web está desenrrolada en estructura e semántica HTML5 e con animacións i estilos CSS3" class="no-border">
+                            <figure aria-label="Selo de Calidade Web: Tecnoloxías HTML5, Semántica, CSS3, Responsive, Multimedia e con conexión offline por caché HTML5" class="w3c xhtml5"></figure>
+                        </a>
+                    </li>
+
+                    <li class="legal">
+                        <a href="legal/aviso-legal.html" title="Aviso Legal e Termos de Uso" target="_blank" class="footer">Aviso Legal</a>
+                    </li>
+
+                    <li class="legal">
+                        <a href="legal/lopd.html" title="Protección de Datos Persoais e Seguridade da Información" target="_blank" class="footer">Política de privacidade</a>
+                    </li>
+
+                    <li class="legal">
+                        <a href="legal/cookies.html" title="Política de Cookies" target="_blank" class="footer">Política de Cookies</a>
+                    </li>
+                </ul>
+            </section>
+        </footer>
     </body>
 </html>
