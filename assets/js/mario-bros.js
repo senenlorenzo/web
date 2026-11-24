@@ -24,14 +24,6 @@ console.log(captions);
 
 console.log(figuras);
 
-figuras.forEach(function (figura, indice) {
-    figura.style.backgroundColor = bgColorsGaleriaMario[indice];
-});
-
-captions.forEach(function (caption, indice) {
-    caption.textContent = personajesGaleriaMario[indice];
-});
-
 // ejercicio 2a
 const info = document.querySelector("#info");
 
@@ -58,4 +50,24 @@ itemsPaletaColores.forEach(function (li) {
 });
 figuras.forEach(function (figura) {
     figura.onclick = pintarFigura;
+});
+// agregar 2 items de la listaGaleria
+let li = document.createElement("li");
+ulGaleriaMario.appendChild(li);
+let figure = document.createElement("figure");
+li.appendChild(figure);
+let caption = document.createElement("figcaption");
+figure.appendChild(caption);
+
+figure.classList.add("img-before");
+personajesGaleriaMario.push("goomba");
+bgColorsGaleriaMario.push("blue");
+figuras = document.querySelectorAll("#galeria-mario figure");
+captions = document.querySelectorAll("#galeria-mario figcaption");
+figuras.forEach(function (figura, indice) {
+    figura.style.backgroundColor = bgColorsGaleriaMario[indice];
+});
+
+captions.forEach(function (caption, indice) {
+    caption.textContent = personajesGaleriaMario[indice];
 });
