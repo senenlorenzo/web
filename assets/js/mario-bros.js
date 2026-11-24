@@ -31,3 +31,31 @@ figuras.forEach(function (figura, indice) {
 captions.forEach(function (caption, indice) {
     caption.textContent = personajesGaleriaMario[indice];
 });
+
+// ejercicio 2a
+const info = document.querySelector("#info");
+
+let itemsPaletaColores = document.querySelectorAll("#paleta-colores li");
+let colorSeleccionado = null;
+itemsPaletaColores.forEach(function (li) {
+    li.style.backgroundColor = li.textContent;
+});
+
+function seleccionarColor() {
+    colorSeleccionado = this.textContent;
+    info.textContent = `Color seleccionado: ${colorSeleccionado}`;
+}
+function pintarFigura() {
+    if (colorSeleccionado === null) {
+        info.textContent = "Primero elige un color";
+        return;
+    }
+    this.style.backgroundColor = colorSeleccionado;
+    info.textContent = `${this.textContent} ahora es ${colorSeleccionado}`;
+}
+itemsPaletaColores.forEach(function (li) {
+    li.onclick = seleccionarColor;
+});
+figuras.forEach(function (figura) {
+    figura.onclick = pintarFigura;
+});
