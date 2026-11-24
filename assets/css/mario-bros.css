@@ -1,5 +1,14 @@
 @charset "UTF-8";
 
+:root {
+    --galeria-mario-1: url("../img/marioBros/mario.webp");
+    --galeria-mario-2: url("../img/marioBros/luigi.webp");
+    --galeria-mario-3: url("../img/marioBros/shyguy.webp");
+    --galeria-mario-4: url("../img/marioBros/waluigi.webp");
+    --galeria-mario-5: url("../img/marioBros/bowser.webp");
+    --galeria-mario-6: url("../img/marioBros/yoshi.webp");
+}
+
 /* CSS mínimo de apoyo: integra o sustituye por el de tu proyecto */
 
 /* ---------- Escenario (se usará en versiones posteriores) ---------- */
@@ -35,6 +44,7 @@ body.jsMario {
             }
         }
         article#galeria-mario {
+            margin-bottom: 25vh;
             ul {
                 /* display: flex; */
                 /* flex-wrap: wrap; */
@@ -57,9 +67,11 @@ body.jsMario {
 
                         figcaption {
                             width: 100%;
-                            text-align: center;
+                            padding-left: 1em;
+                            /* text-align: center; */
                             font-size: 0.85rem;
-                            background: rgba(255, 255, 255, 0.75);
+                            background: #00000080;
+                            color: white;
                         }
                     }
                 }
@@ -67,12 +79,53 @@ body.jsMario {
         }
     }
 }
+
 body.jsMario {
     & main > section.marioClass {
         & article#galeria-mario {
             output {
                 display: block;
                 padding: 2em 0;
+            }
+        }
+    }
+}
+
+/* Ejercicio 1b */
+body.jsMario {
+    & main > section.marioClass {
+        article#galeria-mario {
+            ul.galeria.personajes {
+                & li {
+                    flex: 0 auto;
+                    figure {
+                        &:before {
+                            top: 5%;
+                            left: 5%;
+                            width: 90%;
+                            height: 90%;
+                        }
+                    }
+                }
+
+                li:nth-child(1) figure::before {
+                    background-image: var(--galeria-mario-1);
+                }
+                li:nth-child(2) figure::before {
+                    background-image: var(--galeria-mario-2);
+                }
+                li:nth-child(3) figure::before {
+                    background-image: var(--galeria-mario-3);
+                }
+                li:nth-child(4) figure::before {
+                    background-image: var(--galeria-mario-4);
+                }
+                li:nth-child(5) figure::before {
+                    background-image: var(--galeria-mario-5);
+                }
+                li:nth-child(6) figure::before {
+                    background-image: var(--galeria-mario-6);
+                }
             }
         }
     }
