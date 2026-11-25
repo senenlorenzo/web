@@ -58,12 +58,13 @@ let figure = document.createElement("figure");
 li.appendChild(figure);
 let caption = document.createElement("figcaption");
 figure.appendChild(caption);
-
 figure.classList.add("img-before");
 personajesGaleriaMario.push("goomba");
 bgColorsGaleriaMario.push("blue");
-figuras = document.querySelectorAll("#galeria-mario figure");
-captions = document.querySelectorAll("#galeria-mario figcaption");
+caption.textContent = personajesGaleriaMario[personajesGaleriaMario.length - 1];
+
+// figuras = document.querySelectorAll("#galeria-mario figure");
+// captions = document.querySelectorAll("#galeria-mario figcaption");
 figuras.forEach(function (figura, indice) {
     figura.style.backgroundColor = bgColorsGaleriaMario[indice];
 });
