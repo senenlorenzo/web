@@ -216,16 +216,36 @@ let contadorMario = 0;
 
 //     return nuevoMario;
 // }
+/**
+ * Funcion crearMario()
+ *
+ *
+ * @returns {HTMLElement} Devuelve un nuevo personaje
+ */
 function crearMario() {
+    // Obtener el indice del siguiente personaje
     const indice = contadorMario % nombres.length;
+    // Obtener nombre e imagen
     const nombre = nombres[indice];
     const imagen = sprites[indice];
+    // Crear una instancia
     const nuevoMario = new Mario(nombre, imagen);
+    // Registrar el objeto
     marios.push(nuevoMario);
+    // Convertirlo en personaje activo
     marioActivo = nuevoMario;
+    // Incrementar contador
     contadorMario++;
+    // Mostrar mensaje
     nuevoMario.mostrarMensaje(`${nombre} ha sido creado.`);
     return nuevoMario;
+}
+function cambiarMarioActivo() {
+    if (marios.length === 0) return;
+    let indice = marios.indexOf(marioActivo);
+    indice = (indice + 1) % marios.length;
+    marioActivo = marios[indice];
+    marioActivo.mostrarMensaje(`${marioActivo.nombre} es ahora el personaje activo.`);
 }
 
 // ===================================
@@ -340,5 +360,11 @@ document.addEventListener("keydown", (evento) => {
 document.addEventListener("keydown", (evento) => {
     if (evento.code === "Backspace") {
         marioActivo.reiniciar();
+    }
+});
+document.addEventListener("keydown", (evento) => {
+    if (evento.code === "Tab") {
+        evento.preventDefault();
+        cambiarMarioActivo();
     }
 });
