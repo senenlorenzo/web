@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <!-- Juego de caracteres de casi todos los idiomas humanos (incluidos ñ, tildes ...) -->
+        <meta charset="utf-8" />
+        <!-- Escala inicial y renderizado _responsive_ por el ancho del dispositivo -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Compatibilidad con Microsoft Explorer -->
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- Indéxame NO y sígueme NO -->
+        <meta name="robots" content="noIndex, noFollow" />
+        <!-- Breve descripción del sitio que se verá en los resultados de búsqueda -->
+        <meta name="description" content="Sitio web de prueba elaborado en el curso de Confección y Publicación de Páginas Web (IFCD0110). Unidad Formativa UF1303, Elaboración de hojas de estilos" />
+        <!-- Ruta al favicon -->
+        <link rel="icon" type="image/svg+xml" href="assets/svg/sncuadrado.svg" />
+
+        <!-- Utilícese una hoja de estilos Normalize -->
+        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css" />
+        <!-- <link rel="stylesheet" href="assets/css/hoverCss.css" /> -->
+        <!-- hover.css de ianlunm -->
+        <!-- <link rel="stylesheet" href="https://ianlunn.github.io/Hover/css/hover.css"> -->
+        <!-- link google fonts -->
+
+        <!-- Ruta a las hojas de estilos -->
+        <link rel="stylesheet" href="../assets/css/visibilidad.css" />
+        <link rel="stylesheet" href="../assets/css/variables.css" />
+        <link rel="stylesheet" href="../assets/css/carrousel.css" />
+        <link rel="stylesheet" href="../assets/css/tipografia.css" />
+        <link rel="stylesheet" href="../assets/css/menu.css" />
+        <link rel="stylesheet" href="../assets/css/images.css" />
+        <link rel="stylesheet" href="../assets/css/footer.css" />
+        <!-- <link rel="stylesheet" href="../assets/css/mario.css" /> -->
+        <link rel="stylesheet" href="../assets/css/mario-bros.css" />
+        <link rel="stylesheet" href="../assets/css/mario-class.css" />
+        <link rel="stylesheet" href="../assets/css/estilos.css" />
+        <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+        <!-- <script src="../assets/js/mario.js" defer></script> -->
+        <!-- <script src="../assets/js/mario-bros.js" defer></script> -->
+        <script src="../assets/js/mario-class.js" defer></script>
+
+        <!-- Título de la pestaña del navegador -->
+        <title>UF1303 | Elaboración de hojas de estilos</title>
+    </head>
+    <body class="jsMario">
+        <header id="header"></header>
+        <nav id="menu" class="principal" aria-label="Navegación principal"></nav>
+        <main class="agua">
+            <section class="marioClass">
+                <header class="img-before portada">
+                    <h2>Aprende JavaScript con Mario</h2>
+                </header>
+
+                <!-- ESCENARIO -->
+                <article class="game">
+                    <h3>Escenario de Mario</h3>
+
+                    <div id="escenario" class="escenario">
+                        <!-- JavaScript insertará aquí los objetos Mario -->
+                    </div>
+
+                    <!-- INFORMACIÓN -->
+                    <output id="info" class="info" aria-live="polite">¡Pulsa Crear nuevo Mario para comenzar!</output>
+                </article>
+
+                <!-- CREACIÓN DE PERSONAJES -->
+                <article class="controles creacion">
+                    <h3>Crear personajes</h3>
+
+                    <ul class="lista-botones">
+                        <li>
+                            <button class="btn" id="btnCrearMario">Crear nuevo Mario</button>
+                        </li>
+                    </ul>
+                </article>
+
+                <!-- MOVIMIENTO -->
+                <article class="controles movimiento">
+                    <h3>Movimiento</h3>
+
+                    <ul class="lista-botones">
+                        <li>
+                            <button class="btn" id="btnAvanzar">Avanzar</button>
+                        </li>
+
+                        <li>
+                            <button class="btn" id="btnRetroceder">Retroceder</button>
+                        </li>
+
+                        <li>
+                            <button class="btn" id="btnSaltar">Saltar</button>
+                        </li>
+                    </ul>
+                </article>
+
+                <!-- TRANSFORMACIONES -->
+                <article class="controles transformaciones">
+                    <h3>Transformaciones</h3>
+
+                    <ul class="lista-botones">
+                        <li>
+                            <button class="btn" id="btnAumentar">Aumentar</button>
+                        </li>
+
+                        <li>
+                            <button class="btn" id="btnEncoger">Encoger</button>
+                        </li>
+
+                        <li>
+                            <button class="btn" id="btnRotar">Rotar</button>
+                        </li>
+
+                        <li>
+                            <button class="btn" id="btnDuplicar">Duplicar Mario</button>
+                        </li>
+
+                        <li>
+                            <button class="btn btn-reset" id="btnReset">Reiniciar</button>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+        </main>
+
+        <footer id="footer"></footer>
+    </body>
+    <script>
+        $(function () {
+            $("#header").load("../layouts/header.html");
+            $("#menu").load("../layouts/menu.html");
+            $("#footer").load("../layouts/footer.html");
+        });
+    </script>
+</html>
