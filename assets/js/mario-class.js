@@ -5,8 +5,9 @@
 // ===================================
 
 class Mario {
-    constructor(nombre = "Mario") {
+    constructor(nombre = "Mario", sprite = "mario.webp") {
         this.nombre = nombre;
+        this.sprite = sprite;
         this.x = 20;
         this.scale = 1;
         this.rotation = 0;
@@ -20,8 +21,8 @@ class Mario {
 
         this.elemento.innerHTML = `
             <img
-                src="../assets/img/super-mario-bross.webp"
-                alt="${this.nombre}"
+                src="${ruta}${this.sprite}"
+                alt=${this.nombre}"
                 draggable="false"
             >
             <figcaption>${this.nombre}</figcaption>
@@ -178,6 +179,12 @@ class Mario {
         document.querySelector("#info").textContent = texto;
     }
 }
+// ===================================
+// -----personajes-----
+// ===================================
+const ruta = "../assets/img/marioBros/";
+const sprites = ["mario.webp", "luigi.webp", "yoshi.webp", "shyguy.webp", "bowser.webp", "waluigi.webp", "goomba.webp", "wario.webp"];
+const nombres = ["Mario", "Luigi", "Yoshi", "Shy Guy", "Bowser", "Waluigi", "Goomba", "Wario"];
 
 // ===================================
 // 2. VARIABLES DE CONTROL
@@ -196,17 +203,28 @@ let contadorMario = 0;
 // 3. CREAR UN NUEVO MARIO
 // ===================================
 
+// function crearMario() {
+//     contadorMario++;
+
+//     const nuevoMario = new Mario(`Mario ${contadorMario}`);
+
+//     marios.push(nuevoMario);
+
+//     marioActivo = nuevoMario;
+
+//     nuevoMario.mostrarMensaje(`${nuevoMario.nombre} ha sido creado.`);
+
+//     return nuevoMario;
+// }
 function crearMario() {
-    contadorMario++;
-
-    const nuevoMario = new Mario(`Mario ${contadorMario}`);
-
+    const indice = contadorMario % nombres.length;
+    const nombre = nombres[indice];
+    const imagen = sprites[indice];
+    const nuevoMario = new Mario(nombre, imagen);
     marios.push(nuevoMario);
-
     marioActivo = nuevoMario;
-
-    nuevoMario.mostrarMensaje(`${nuevoMario.nombre} ha sido creado.`);
-
+    contadorMario++;
+    nuevoMario.mostrarMensaje(`${nombre} ha sido creado.`);
     return nuevoMario;
 }
 
